@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#ffff;
+}
+
+.principal-img{
+    width: 100%;
+    height: 60%;
+    position: initial;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.barra-inicio{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #727BB0;
+    justify-content: space-around;
+    height: 7rem;
+    width: 100%;
+    align-items: center;
+    opacity: 0.85;
+    position: fixed;
+}
+
+.enlaces{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    list-style-type: none;
+    
+}
+.decoracion-enlace{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black  ;
+}
+.decoracion-logo{
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.titulo-lugares{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 18rem ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+#primer-h5{
+    font-size: 2.5rem;
+}
+
+#segundo-h4{
+    font-size: 2rem;
+}   
+
+.imagenes-lugares-destacados{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.imagen-dentro-destacado{
+    width:  40%;
+}
+
+.servicios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 35rem;
+    margin-top: 20rem;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.gastronomia{
+    background-image: url(/img/Fogon-interior.jpg);
+    height: 100%;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.hoteleria{
+    background-image: url(/img/Fogon-interior.jpg);
+    height: 100%;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#text-servicios-1{
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    border: 0.3rem black solid;
+    border-radius: 0.5rem;
+    
+}
+
+#text-servicios-2{
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+    background: #D9D9D9;
+    padding: 10px 20px;
+    border: 0.3rem black solid;
+    border-radius: 0.5rem;
+}
+
+
+.imagenes-testimonios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.imagen-dentro-testimonios1{
+    width:  40%;
+}
+.imagen-dentro-testimonios2{
+    width:  45%;
+}
+
+
+
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 15rem;
+    background-color: black;
+    align-items: center;
+}
+.informacion-footer1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.informacion-footer2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer strong{
+    font-size: 1.3rem;
+    color: white;
+}
+.imagen-footer{
+    width: 5rem;
+    
+}
+
+/*------------------------------carrosel de fotos en la pagina principal--------------------------------------------------------------*/
+
+.carrosel {
+    -webkit-perspective: 250px;
+    -moz-perspective: 250px;
+    width: 400px;
+    height: 200px;
+    top: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+
+@-webkit-keyframes efeitoCarrosel {
+    from {
+        -webkit-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        -webkit-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes efeitoCarrosel {
+    from {
+        -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1
+    }
+}
+
+.caixa__card {
+    width: 20rem;
+    height: 11rem;
+    background-color: #442222;
+    position: absolute;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem;
+    right: 1.5rem;
+    font-size: 9px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    -webkit-animation-name: efeitoCarrosel;
+    -moz-animation-name: efeitoCarrosel;
+    -webkit-animation-duration: 13s;
+    -moz-animation-duration: 13s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+.caixa__card:hover {
+    border: solid #727BB0 3px;
+    box-shadow: 0px 0px 10px #727BB0;
+}
+
+.caixa__card.cc__1 {
+    -webkit-animation-delay: -7s;
+    -moz-animation-delay: -7s;
+     
+}
+
+.caixa__card.cc__2 {
+
+    background: linear-gradient(-229deg, #00DBDE, #FC00FF);
+    -webkit-animation-delay: -6s;
+    -moz-animation-delay: -6s;
+}
+
+.caixa__card.cc__3 {
+
+    background: linear-gradient(-229deg, #50d990, #d4d054);
+    -webkit-animation-delay: -5s;
+    -moz-animation-delay: -5s;
+}
+
+.caixa__card.cc__4 {
+    background: linear-gradient(-229deg, #cf91ff, #5782F5);
+    -webkit-animation-delay: -4s;
+    -moz-animation-delay: -4s;
+}
+
+.caixa__card.cc__5 {
+    background: linear-gradient(-229deg, #642B73, #C6426E);
+    -webkit-animation-delay: -3s;
+    -moz-animation-delay: -3s;
+}
+
+.caixa__card.cc__6 {
+    background: linear-gradient(-229deg, #D9AFD9, #97D9E1);
+    -webkit-animation-delay: -2s;
+    -moz-animation-delay: -2s;
+}
+
+.caixa__card.cc__7 {
+    background: linear-gradient(-229deg, #FBAB7E, #F7CE68);
+    -webkit-animation-delay: -1s;
+    -moz-animation-delay: -1s;
+}
+
+.caixa__card.cc__8 {
+    background: linear-gradient(-229deg, #1472ff, #A8EB12);
+}
